@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #d8dede;
+    background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contenedor1 {
+    width: 100%;
+    display: grid;
+    margin: 20px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "logo nav nav nav"
+    "galeria galeria galeria galeria"
+    "galeria galeria galeria galeria"
+    "galeria galeria galeria galeria"
+    "footer footer footer footer";
+}
+
+.contenedor{
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+    "logo nav nav nav"
+    "imagen1 imagen1 imagen2 imagen2"
+    "imagen1 imagen1 imagen2 imagen2"
+    "texto1 texto1 texto1 texto1"
+    "texto2 texto2 texto2 texto2"
+    "galeria galeria galeria galeria"
+    "galeria galeria galeria galeria"
+    "galeria galeria galeria galeria"
+    "footer footer footer footer";
+}
+
+
+
+/* LOGO */
+.logo {
+     grid-area: logo;
+}
+.logo{
+    width: 250px;
+    margin: 10px;   
+}
+.logo:hover{
+    color: white;
+    opacity: 50%;
+}
+
+/* BARRA DE NAVEGACION */
+.nav {
+    grid-area: nav;
+}
+.nav{
+    display: flex;
+    align-items: center;  
+}
+.na{
+    display: flex;
+    align-items: center;
+    width: 800px;
+    height: 60px;
+    background-color:violet;
+    gap: 1rem;
+    border-radius: 5px;
+}
+.nav1 {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: start;
+    margin: 0 10px;
+    
+   
+}
+.nav1:hover{
+    background-color: white;
+    opacity: 50%;
+    height: 60px;
+   
+}
+.imagen1 {
+    display: flex;
+    height: 100%;
+    border-radius: 5px;
+    justify-content: center;
+}
+.imagen2 {
+    display: flex;
+    height: 100%;
+    border-radius: 5px;
+    justify-content: center;
+}
+.imagen1{
+    grid-area: imagen1;
+}
+.imagen2{
+    grid-area: imagen2;
+}
+
+.imgs {
+    width: 300px;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgb(184, 98, 98);
+}
+
+.texto1{
+    grid-area: texto1;
+}
+.texto2{
+    grid-area: texto2;
+}
+
+.texto1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #d8dede;
+    font-family: 'Fredoka One', cursive; 
+    font-size: 30px;
+    margin-top: 30px;
+    
+
+}
+.texto2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    background-color: violet;
+    font-size: 50px;
+    align-content: center;
+    font-family: 'Fredoka One', cursive
+}
+.texto1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.galeria {
+    grid-area: galeria;
+}
+
+.imgG{
+    width: 250px;
+}
+.galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    text-align: center;
+    width: 90%;
+    padding-bottom: 20px;
+}
+.footer{
+    grid-area: footer;
+}
+.footer{
+    display: flex;
+    background-color: violet;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-top:solid 1px rgb(0, 0, 0);
+}
+.ip{
+    width: 400px;
+    height: 150px;
+}
+.t{
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 30px;
+}
+
+
+@media  (max-width: 700px) {
+    .contenedor{
+       
+        width: 100%;
+        margin: 20px auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: 
+        "logo logo logo"
+        "nav nav nav"
+        "imagen1 imagen1 imagen1"
+        "imagen2 imagen2 imagen2"
+        "texto1 texto1 texto1"
+        "texto2 texto2 texto2" 
+        "galeria galeria galeria"
+        "galeria galeria galeria"
+        "footer footer footer";
+    }
+    
+}
+
